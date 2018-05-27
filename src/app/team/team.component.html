@@ -1,0 +1,14 @@
+
+<div>
+
+  <img src="{{team_details?.crestUrl}}"><h4>{{team_details?.name}}</h4><span>({{team_details?.code}})</span>
+
+</div>
+
+
+<div class="fixtures-container">
+  <app-fixture *ngFor="let i of list_fixtures" [fixture]="i"></app-fixture>
+</div>
+
+
+<app-player *ngFor="let i of list_player?.players" [player]="i"></app-player>

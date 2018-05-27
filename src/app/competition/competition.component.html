@@ -1,0 +1,45 @@
+<mat-card>
+  <div >
+    <h3>
+      {{competition?.league}}
+    </h3>
+    <h5>{{competition?.year}}</h5>
+  </div>
+
+  <h5>{{competition?.caption}}</h5>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Current Match Day</th>
+          <th>Number Of Games</th>
+          <th>Number Of Match Days</th>
+          <th>Number Of Teams</th>
+
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th>{{competition?.currentMatchday}}</th>
+        <th>{{competition?.numberOfGames}}</th>
+        <th>{{competition?.numberOfMatchdays}}</th>
+        <th>{{competition?.numberOfTeams}}</th>
+
+      </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+  <ul>
+    <li>
+      <a routerLink="{{competition?.id}}/league">League</a>
+    </li>
+
+    <!--<li>-->
+      <!--<a routerLink="{{competition?.id}}/team">Teams</a>-->
+    <!--</li>-->
+  </ul>
+
+</mat-card>

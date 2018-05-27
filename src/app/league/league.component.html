@@ -1,0 +1,113 @@
+<h2>Competition Caption: &nbsp;&nbsp;{{league_data?.leagueCaption }}</h2>
+
+
+<mat-card *ngFor="let i of league_data?.standing">
+  <h3><a routerLink="/{{i._links.team.href.split('/')[i._links.team.href.split('/').length - 1]}}/team" >{{i?.teamName}}</a></h3>
+    <!--<span>{{}}</span>-->
+  <div>
+    <h4>Overall</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Points</th>
+          <th>Wins</th>
+          <th>Losses</th>
+          <th>Draws</th>
+          <th>Goals</th>
+          <th>Goals Against</th>
+          <th>Goals Difference</th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th>{{i.position}}</th>
+          <th>{{i.points}}</th>
+          <th>{{i.wins}}</th>
+          <th>{{i.losses}}</th>
+          <th>{{i.draws}}</th>
+          <th>{{i.goals}}</th>
+          <th>{{i.goalsAgainst}}</th>
+          <th>{{i.goalDifference}}</th>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <div>
+    <h4>Away</h4>
+    <table>
+      <thead>
+      <tr>
+        <!--<th>Position</th>-->
+        <!--<th>Points</th>-->
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>Draws</th>
+        <th>Goals</th>
+        <th>Goals Against</th>
+        <!--<th>Goals Difference</th>-->
+
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <!--<th>{{i.position}}</th>-->
+        <!--<th>{{i.points}}</th>-->
+        <th>{{i.away.wins}}</th>
+        <th>{{i.away.losses}}</th>
+        <th>{{i.away.draws}}</th>
+        <th>{{i.away.goals}}</th>
+        <th>{{i.away.goalsAgainst}}</th>
+        <!--<th>{{i.goalDifference}}</th>-->
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <div>
+    <h4>Home</h4>
+    <table>
+      <thead>
+      <tr>
+        <!--<th>Position</th>-->
+        <!--<th>Points</th>-->
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>Draws</th>
+        <th>Goals</th>
+        <th>Goals Against</th>
+        <!--<th>Goals Difference</th>-->
+
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <!--<th>{{i.position}}</th>-->
+        <!--<th>{{i.points}}</th>-->
+        <th>{{i.home.wins}}</th>
+        <th>{{i.home.losses}}</th>
+        <th>{{i.home.draws}}</th>
+        <th>{{i.home.goals}}</th>
+        <th>{{i.home.goalsAgainst}}</th>
+        <!--<th>{{i.goalDifference}}</th>-->
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+</mat-card>
